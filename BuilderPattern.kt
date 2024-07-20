@@ -1,4 +1,3 @@
-package com.droame.createbooking.app.common.view
 
 class Mobile()
 {
@@ -42,12 +41,12 @@ class Mobile()
     }
 }
 
-fun main(){
-    val mobile = Mobile
-                .MobileBuilder("SAMSUNG",8)
-                .isFastCharging(true)
-                .is5gSupported(true)
-                .build()
-
-    mobile.printMobile()
-}
+//fun main(){
+//    val mobile = Mobile
+//                .MobileBuilder("SAMSUNG",8)
+//                .isFastCharging(true)
+//                .is5gSupported(true)
+//                .build()
+//
+//    mobile.printMobile()
+//}

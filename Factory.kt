@@ -1,5 +1,3 @@
-package com.droame.createbooking.app.common.view
-
 abstract class Employee{
     abstract fun printEmployeeName()
 }
@@ -22,12 +20,12 @@ abstract class EmployeeFactory{
 
 
 class AndroidDeveloperFactory : EmployeeFactory() {
-    override fun createEmployee() : Employee{
+    override fun createEmployee() : Employee {
         return AndroidDeveloper()
     }
 }
 class WebDeveloperFactory : EmployeeFactory() {
-    override fun createEmployee() : Employee{
+    override fun createEmployee() : Employee {
         return WebDeveloper()
     }
 }

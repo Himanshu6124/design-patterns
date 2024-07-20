@@ -1,4 +1,3 @@
-package com.droame.createbooking.app.common.view
 
 interface Builder{
     fun buildCPU()
@@ -59,11 +58,11 @@ class ComputerDirector{
 }
 
 
-fun main(){
-
-    val gamingComputerBuilder = GamingComputerBuilder()
-    ComputerDirector().build(gamingComputerBuilder)
-    val computer = gamingComputerBuilder.getComputer()
-    computer.printSpec()
-
-}
+//fun main(){
+//
+//    val gamingComputerBuilder = GamingComputerBuilder()
+//    ComputerDirector().build(gamingComputerBuilder)
+//    val computer = gamingComputerBuilder.getComputer()
+//    computer.printSpec()
+//
+//}
