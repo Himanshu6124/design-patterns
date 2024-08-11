@@ -1,9 +1,9 @@
-
+package patterns
 interface Builder{
     fun buildCPU()
     fun buildRAM()
     fun buildHDD()
-    fun getComputer() :Computer
+    fun getComputer() : Computer
 }
 
 class Computer {

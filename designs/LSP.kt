@@ -1,4 +1,4 @@
-import java.util.logging.Logger
+package designs
 
 open class Rectangle {
 

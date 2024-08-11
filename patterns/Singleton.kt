@@ -1,9 +1,11 @@
+package patterns
+
 class Singleton(val name: String) {
 
     companion object{
         private var INSTANCE : Singleton? = null
 
-        fun getInstance(name: String): Singleton{
+        fun getInstance(name: String): Singleton {
             if(INSTANCE == null){
                 synchronized(this){
                     if (INSTANCE == null){

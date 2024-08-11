@@ -1,3 +1,5 @@
+package patterns
+
 abstract class Employee{
     abstract fun printEmployeeName()
 }

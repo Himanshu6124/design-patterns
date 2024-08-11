@@ -1,3 +1,5 @@
+package designs
+
 interface MessageService {
     fun sendMessage(message: String)
 }

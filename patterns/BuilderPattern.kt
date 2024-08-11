@@ -1,4 +1,4 @@
-
+package patterns
 class Mobile()
 {
     private var brand : String? = null
@@ -24,18 +24,18 @@ class Mobile()
         var is5G : Boolean = false
 
         //optional
-        fun is5gSupported(is5G : Boolean) : MobileBuilder{
+        fun is5gSupported(is5G : Boolean) : MobileBuilder {
             this.is5G = is5G
             return this
         }
 
         //optional
-        fun isFastCharging(fastCharge : Boolean) : MobileBuilder{
+        fun isFastCharging(fastCharge : Boolean) : MobileBuilder {
             this.fastCharging = fastCharge
             return this
         }
 
-        fun build() : Mobile{
+        fun build() : Mobile {
             return Mobile(this)
         }
     }
