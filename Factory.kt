@@ -1,3 +1,8 @@
+/* At its core, the Factory Pattern is a creational design pattern that abstracts 
+* the process ofobject creation. It allows you to create objects without specifying 
+* their exact types, delegating the responsibility to subclasses or specialized factory classes.
+* This abstraction promotes flexibility and code maintainability. */
+
 abstract class Employee{
     abstract fun printEmployeeName()
 }
