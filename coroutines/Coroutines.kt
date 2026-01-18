@@ -6,6 +6,7 @@ import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -16,35 +17,43 @@ import kotlin.coroutines.suspendCoroutine
 import kotlin.time.measureTime
 
 
-// fun main(): Unit = runBlocking {
-////    println("Before")
-////    suspendCoroutine { continuation ->
-////        continuation.resume(Unit)
-////    }
-////    delay(1000)
-////    println("After")
-//
-//
-//    val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
-//        println("CoroutineException Caught exception: ${throwable.message}")
-//    }
-//
-//    GlobalScope.launch(Dispatchers.IO + exceptionHandler + CoroutineName("")) {
-//        println("CoroutineException Caught exception: $")
-//
-//        var x  = 5/0
-//
-//    }
-//
-//}
+ fun main(): Unit = runBlocking {
+//     coroutineScopeTest()
+       superVisorScopeTest()
+}
 
-suspend fun postItem(item: String) {
+suspend fun coroutineScopeTest() {
+    val scope = CoroutineScope(context = Dispatchers.IO + CoroutineName("MyScope") + CoroutineExceptionHandler { _, throwable -> } + Job())
+    scope.launch {
+        launch {
+            delay(1000)
+            throw RuntimeException("Child failed")
+        }
 
-    val token = requestToken(
-        onToken = { token ->
-            val posts = getPosts(item, token)
-            print(posts)
-        })
+        launch {
+            repeat(5) {
+                delay(500)
+                println("Still running")
+            }
+        }
+    }.join()
+
+}
+
+suspend fun superVisorScopeTest() {
+    supervisorScope {
+        launch {
+            delay(1000)
+            throw RuntimeException("Child failed")
+        }
+
+        launch {
+            repeat(5) {
+                delay(500)
+                println("Still running")
+            }
+        }
+    }
 }
 
 
