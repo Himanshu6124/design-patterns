@@ -18,9 +18,9 @@ class ParkingManager(
 fun main() {
     val parkingLot =
         listOf(
-            ParkingSlot(1, VehicleType.BIKE),
-            ParkingSlot(2, VehicleType.CAR),
-            ParkingSlot(3, VehicleType.BIKE)
+            ParkingSlot(slotNumber = 1, vehicleType = VehicleType.BIKE),
+            ParkingSlot(slotNumber = 2, vehicleType = VehicleType.CAR),
+            ParkingSlot(slotNumber = 3, vehicleType = VehicleType.BIKE)
         )
 
     val parkingManager = ParkingManager(parkingLot)
