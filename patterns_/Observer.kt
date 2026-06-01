@@ -14,7 +14,7 @@ interface Publisher {
 
     fun notifyObservers()
 
-}
+} 
 
 
 class YtStubscriber : Observer {

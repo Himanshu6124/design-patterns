@@ -1,5 +1,6 @@
 package livedata
 
+//https://medium.com/androidiots/how-i-made-my-own-livedata-1faf4a45520
 class LiveData<T>(initial : T){
 
     private var value : T? = initial

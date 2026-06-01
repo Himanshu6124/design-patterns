@@ -43,12 +43,16 @@ fun main() {
             emit(3)
         }
 
+        flow.collect{
 
-        flow.collect(object : Collector<Int> {
-            override suspend fun emit(value: Int) {
-                println("Received: $value")
-            }
-        })
+        }
+
+
+//        flow.collect(object : Collector<Int> {
+//            override suspend fun emit(value: Int) {
+//                println("Received: $value")
+//            }
+//        })
 
     }
 }
