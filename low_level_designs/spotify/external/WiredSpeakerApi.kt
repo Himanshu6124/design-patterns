@@ -4,7 +4,7 @@ class WiredSpeakerApi {
 
     fun playViaWired(){
 
-        println("Plating via wired")
+        println("Playing via wired")
     }
 
 }
